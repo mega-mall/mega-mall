@@ -6,7 +6,7 @@ const FinancialButton = () => {
   return (
     <StyledDiv>
       <StyledButton>
-        <StyledTypography>{translate('MegaMall_Financial_Button', 'Финансиско друштво')}</StyledTypography>
+        <StyledTypography>{translate('MegaMall_Financial_Button', 'Финанси друштво')}</StyledTypography>
       </StyledButton>
     </StyledDiv>
   );
