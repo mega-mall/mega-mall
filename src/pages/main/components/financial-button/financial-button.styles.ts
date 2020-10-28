@@ -16,7 +16,7 @@ const StyledTypography = styled(Typography)`
 `;
 
 const StyledDiv = styled.div`
-  height: 180px;
+  height: 190px;
   width: 350px;
   background-color: #fdbc00;
   position: absolute;
