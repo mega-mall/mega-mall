@@ -455,7 +455,9 @@
       "MegaMall_SimilarProducts_Heading": "Слични производи и останати продавници",
       "MegaMall_Financial_Button": "Финансиско друштво",
       "MegaMall_GoTo_Store": "Види продавница",
-      "MegaMall_GoTo_Product": "Види во продавница"
+      "MegaMall_GoTo_Product": "Види во продавница",
+      "MegaMall_Available_Stores": "Достапни E-комерции",
+      "MegaMall_Breadcrumbs_Stores": "Продавници"
     }
   },
   "en-GB": {
@@ -915,7 +917,9 @@
       "MegaMall_SimilarProducts_Heading": "Similar products and other stores",
       "MegaMall_Financial_Button": "Financial group",
       "MegaMall_GoTo_Store": "Visit store",
-      "MegaMall_GoTo_Product": "See this product in the store"
+      "MegaMall_GoTo_Product": "See this product in the store",
+      "MegaMall_Available_Stores": "Available E-commerces",
+      "MegaMall_Breadcrumbs_Stores": "Stores"
     }
   }
 }
