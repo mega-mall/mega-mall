@@ -75,7 +75,7 @@ const ProductItem = (props: IProductItem) => {
                   {props.title.length > 100 ? props.title.substring(0, 100) + '...' : props.title}
                 </Box>
               </Grid>
-              <Grid container spacing={props.discountPrice ? 1 : 0}>
+              <Grid container spacing={!!props.discountPrice ? 1 : 0}>
                 <Hidden smUp>
                   <Grid item xs={!!props.discountPrice ? 6 : 12}>
                     {!!props.discountPrice && <MobileStyledPriceBox />}
