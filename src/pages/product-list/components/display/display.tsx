@@ -99,7 +99,7 @@ const Display = (props: IProps) => {
                               img={product.imageSource || displayData[1].imageSource}
                               title={product.name}
                               price={product.price === '' ? '0' : product.price}
-                              discountPrice={product.discountPrice}
+                              discountPrice={product.promotionPrice}
                               description={''}
                               logo={findStoreLogo(product.store)}
                               link={product.link}
