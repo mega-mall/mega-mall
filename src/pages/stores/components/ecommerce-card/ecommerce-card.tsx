@@ -14,7 +14,7 @@ const ECommerceCard = (props: IECommerceCard) => {
     <>
       <StyledMaterialCard raised onClick={() => (window.location.href = props.storeLink)}>
         <Box p={1}>
-          <StyledCardMedia image={`/assets/images${props.storeLogoPath}.png`} />
+          <StyledCardMedia image={props.storeLogoPath} />
           <CardContent>
             <Box fontWeight="fontWeightBold" fontFamily="RobotoRegular" fontSize="16px" textAlign="center">
               <Typography variant="h6">{props.storeTitle}</Typography>
