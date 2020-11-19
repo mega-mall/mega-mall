@@ -51,7 +51,6 @@ const Display = (props: IProps) => {
     var filterArray: string[] = new Array();
     filterArray.push(props.subCategoryItem.title);
     filterArray = filterArray.concat(data.filter(element => element.parentId === props.subCategoryItem.id).map(x => '&filter=' + x.title.toString()));
-    console.log('Array', filterArray.join(''));
     return filterArray.join('');
   };
 
