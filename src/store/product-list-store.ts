@@ -1,4 +1,3 @@
-import { push } from 'connected-react-router';
 import { OrderTypes } from 'lib/enums';
 import { AppThunk } from './app-thunk';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
