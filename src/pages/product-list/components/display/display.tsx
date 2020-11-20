@@ -120,7 +120,7 @@ const Display = (props: IProps) => {
               </>
             ) : (
               <>
-                <Grid container spacing={1}>
+                <Grid container spacing={5}>
                   {allEcommerces.map(store => {
                     if (store.ecommerceCategory.includes(currentCategory)) {
                       return (
