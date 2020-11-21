@@ -49,7 +49,7 @@ const DetailedProductView = (props: IProps) => {
                       {props.data.name}
                     </Typography>
                     <Box textAlign="left">
-                      <Typography variant="body2">{translate('MegaMall_GoTo_Product', 'Види во продавница')}</Typography>
+                      <Typography variant="body2">{translate('MegaMall_GoTo_Product', 'Види продукт')}</Typography>
                     </Box>
                   </Link>
                 </Box>
