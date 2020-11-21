@@ -47,11 +47,9 @@ const Display = (props: IProps) => {
 
   //get fillters . . .
   const getFilters = () => {
-    const data = menuItems();
-    var filterArray: string[] = new Array();
-    filterArray.push(props.subCategoryItem.title);
-    filterArray = filterArray.concat(data.filter(element => element.parentId === props.subCategoryItem.id).map(x => '&filter=' + x.title.toString()));
-    return filterArray.join('');
+    var filter =
+      props.subCategoryItem.children && props.subCategoryItem.children.length > 0 ? props.subCategoryItem.title + props.subCategoryItem.children.map(x => `&filter=${x.title}`).join('') : props.subCategoryItem.title;
+    return filter;
   };
 
   useEffect(() => {
