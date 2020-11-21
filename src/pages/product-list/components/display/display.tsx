@@ -45,15 +45,10 @@ const Display = (props: IProps) => {
 
   const [currentCategory, setCurrentCategory] = useState('');
 
-  //get fillters . . .
-  const getFilters = () => {
-    var filter =
-      props.subCategoryItem.children && props.subCategoryItem.children.length > 0 ? props.subCategoryItem.title + props.subCategoryItem.children.map(x => `&filter=${x.title}`).join('') : props.subCategoryItem.title;
-    return filter;
-  };
-
   useEffect(() => {
-    props.onInit(getFilters());
+    props.onInit(
+      props.subCategoryItem.children && props.subCategoryItem.children.length > 0 ? props.subCategoryItem.title + props.subCategoryItem.children.map(x => `&filter=${x.title}`).join('') : props.subCategoryItem.title
+    );
   }, []);
 
   const listTypeChange = (type: ListTypes) => {
