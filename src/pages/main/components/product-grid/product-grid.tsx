@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react';
-import { Box, Grid, Typography, Link, Hidden } from '@material-ui/core';
+import { Box, Grid, Typography, Link } from '@material-ui/core';
 import Card from './../../../../components/card/card';
-import { cards } from './product-grid.data';
 import { AppDispatch } from 'index';
 import { getLatestProducts } from 'store/main-store';
 import ApplicationState from 'store/application-state';
 import { connect } from 'react-redux';
 import { translate } from 'lib/translate';
-import { displayData } from 'pages/product-list/components/display/product-item-list/product-item-list.data';
 import { formatPrice } from 'utils/helpers/price-formatter';
+import { displayData } from 'pages/product-list/components/display/similar-products-list/product-item-list.data';
 
 interface IProps {
   data: Models.Product.Model[];

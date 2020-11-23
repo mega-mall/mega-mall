@@ -24,14 +24,11 @@ const ProductItem = (props: IProductItem) => {
         <Grid container item xs={12}>
           {/* Desktop product item */}
           <Hidden smDown>
-            {/* Desktop image */}
-            {props.img && (
-              <Grid item xs={2}>
-                <Box>
-                  <StyledImage src={props.img} />
-                </Box>
-              </Grid>
-            )}
+            <Grid item xs={2}>
+              <Box>
+                <StyledImage src={props.img} />
+              </Box>
+            </Grid>
             <Grid container item xs={props.img ? 10 : 12}>
               <Grid item xs={12}>
                 <Box fontFamily="RobotoBold" fontSize="18px" color="#000000" ml={1}>
@@ -52,24 +49,21 @@ const ProductItem = (props: IProductItem) => {
                 </Grid>
               )}
               <Grid container item xs={!!props.discountPrice ? 8 : 6} alignItems="center" alignContent="flex-end" direction="column">
-                <StyledLink href={props.storeLink}>
+                <StyledLink href={props.storeLink} target="_blank">
                   <StyledLogo src={props.logo} />
                   <StyledStoreLink>{translate('MegaMall_GoTo_Store', 'Види продавница')}</StyledStoreLink>
                 </StyledLink>
               </Grid>
             </Grid>
-
             {/* End desktop product item */}
           </Hidden>
           <Hidden mdUp>
             {/* Mobile product item */}
-            {props.img && (
-              <Grid item xs={3}>
-                <Box>
-                  <StyledImage src={props.img} />
-                </Box>
-              </Grid>
-            )}
+            <Grid item xs={3}>
+              <Box>
+                <StyledImage src={props.img} />
+              </Box>
+            </Grid>
             <Grid container item xs={props.img ? 9 : 12}>
               <Grid item xs={12}>
                 <Box fontFamily="RobotoRegular" fontSize="14px" color="#000000">
@@ -80,16 +74,16 @@ const ProductItem = (props: IProductItem) => {
                 <Hidden smUp>
                   <Grid item xs={!!props.discountPrice ? 4 : 6}>
                     {!!props.discountPrice && <MobileStyledPriceBox />}
-                    <Box fontFamily="OswaldMedium" fontSize="18px" color="#000000">
+                    <Box fontFamily="OswaldRegular" fontSize="16px" color="#000000">
                       {props.price ? props.price + ' ' + translate('MegaMall_Product_Price_Currency', 'МКД') : '0' + ' ' + translate('MegaMall_Product_Price_Currency', 'МКД')}
                     </Box>
                   </Grid>
                 </Hidden>
                 {/*START TABLET */}
                 <Hidden only="xs">
-                  <Grid item xs={!!props.discountPrice && props.img ? 4 : 6}>
+                  <Grid item xs={4}>
                     {!!props.discountPrice && <MobileStyledPriceBox />}
-                    <Box fontFamily="OswaldMedium" fontSize="18px" color="#000000">
+                    <Box fontFamily="OswaldRegular" fontSize="16px" color="#000000">
                       {props.price ? props.price + ' ' + translate('MegaMall_Product_Price_Currency', 'МКД') : '0' + ' ' + translate('MegaMall_Product_Price_Currency', 'МКД')}
                     </Box>
                   </Grid>
@@ -97,14 +91,14 @@ const ProductItem = (props: IProductItem) => {
                 {/* END TABLET */}
                 {!!props.discountPrice && (
                   <Grid item xs={4}>
-                    <Box fontFamily="OswaldMedium" fontSize="18px" color="#000000">
+                    <Box fontFamily="OswaldRegular" fontSize="16px" color="#000000">
                       {props.discountPrice + ' ' + translate('MegaMall_Product_Price_Currency', 'МКД')}
                     </Box>
                   </Grid>
                 )}
-                {!props.discountPrice && <Grid item xs={2}></Grid>}
+                <Hidden mdUp>{!props.discountPrice && <Grid item xs={2} sm={4} />}</Hidden>
                 <Grid item xs={4}>
-                  <StyledLink href={props.storeLink}>
+                  <StyledLink href={props.storeLink} target="_blank">
                     <StyledLogo src={props.logo} />
                     <StyledStoreLink>{translate('MegaMall_GoTo_Store', 'Види продавница')}</StyledStoreLink>
                   </StyledLink>

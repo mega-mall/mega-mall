@@ -13,7 +13,7 @@ import { ROUTES } from 'consts';
 import { StyledBox, StyledLink, StyledPagination } from './display.styles';
 import { getProducts, changePageOptions } from 'store/product-list-store';
 import { PageOptions } from 'lib/models';
-import { displayData } from './product-item-list/product-item-list.data';
+import { displayData } from './similar-products-list/product-item-list.data';
 import { ListTypes } from 'lib/enums';
 import { MenuItem } from 'lib/data';
 import { _EmptyState } from 'components/empty-state';

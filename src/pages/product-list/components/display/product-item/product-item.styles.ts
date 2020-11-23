@@ -14,8 +14,9 @@ const StyledImage = styled.img`
 const StyledLogo = styled.img`
   width: 100%;
   max-height: 40px;
-  bottom: 35px;
-  right: 7px;
+  max-width: 120px;
+  margin: 0 auto;
+  display: block;
   box-shadow: 0px 0px 15px #d3d3d3;
 
   @media (max-width: 768px) {
@@ -25,8 +26,6 @@ const StyledLogo = styled.img`
 `;
 
 const StyledStoreLink = styled(Box)`
-  bottom: 15px;
-  right: 7px;
   text-align: center;
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 12px;
@@ -41,13 +40,12 @@ const StyledStoreLink = styled(Box)`
 `;
 
 const StyledGrid = styled(Grid)`
-  min-height: 170px;
+  min-height: 190px;
   transition: 0.3s;
 
   @media (max-width: 768px) {
-    min-height: 140px;
+    min-height: 100px;
   }
-
   &:hover {
     div {
       text-decoration: underline;
