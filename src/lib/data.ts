@@ -1416,19 +1416,19 @@ const menuItems = (): MenuItem[] => [
   {
     id: 225,
     title: translate('MegaMall_Header_Quilt_Covers', 'Навлаки за јорган'),
-    link: ` /categories/home/bedding/covers`,
+    link: ` /categories/home/beddings/covers`,
     parentId: 43
   },
   {
     id: 226,
     title: translate('MegaMall_Header_Pillow_Covers', 'Навлаки за перници'),
-    link: ` /categories/home/bedding/pillow-cases`,
+    link: ` /categories/home/beddings/pillow-cases`,
     parentId: 43
   },
   {
     id: 227,
     title: translate('MegaMall_Header_Sheet', 'Чаршафи'),
-    link: ` /categories/home/bedding/sheets`,
+    link: ` /categories/home/beddings/sheets`,
     parentId: 43
   },
   {
