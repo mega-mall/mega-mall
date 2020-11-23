@@ -30,7 +30,7 @@ interface IProps extends RouteComponentProps<{ type: string }> {
   subCategoryItem: MenuItem;
   loadingFlag: boolean;
 
-  onInit: (filter: string) => void;
+  onInit: (filters: string) => void;
   onOptionsChange: (options: PageOptions) => void;
 }
 
@@ -46,7 +46,9 @@ const Display = (props: IProps) => {
   const [currentCategory, setCurrentCategory] = useState('');
 
   useEffect(() => {
-    props.onInit(props.subCategoryItem.title);
+    props.onInit(
+      props.subCategoryItem.children && props.subCategoryItem.children.length > 0 ? props.subCategoryItem.title + props.subCategoryItem.children.map(x => `&filter=${x.title}`).join('') : props.subCategoryItem.title
+    );
   }, []);
 
   const listTypeChange = (type: ListTypes) => {
@@ -153,8 +155,8 @@ const Display = (props: IProps) => {
 };
 
 const mapDispatchToProps = (dispatch: AppDispatch) => ({
-  onInit: (filter: string) => {
-    dispatch(getProducts(filter));
+  onInit: (filters: string) => {
+    dispatch(getProducts(filters));
   },
   onOptionsChange: (options: PageOptions) => {
     dispatch(changePageOptions(options));
