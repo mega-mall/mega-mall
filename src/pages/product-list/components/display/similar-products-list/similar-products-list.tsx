@@ -12,8 +12,8 @@ import { connect } from 'react-redux';
 import { getLatestProducts } from 'store/main-store';
 import { PageOptions } from 'lib/models';
 import { changePageOptions } from 'store/product-list-store';
-import { findStoreLogo } from 'utils/helpers/find-store-logo';
 import DetailedProductItem from 'pages/detailed-view/components/detailed-view/detailed-product-item/detailed-product-item';
+import { Stores } from 'lib/enums';
 
 interface ShopsListProps {
   isPaging: 'prodList' | 'detailList';
@@ -28,6 +28,10 @@ const ProductItemList = (props: ShopsListProps) => {
   useEffect(() => {
     props.onInit();
   }, []);
+
+  const findStoreLogo = (storeId: number) => {
+    return `./../../../../../assets/images/stores/${Stores[storeId].toLocaleLowerCase()}.svg`;
+  };
 
   return (
     <>

@@ -106,7 +106,7 @@ const Display = (props: IProps) => {
                               price={product.price === '' ? '0' : product.price}
                               discountPrice={product.promotionPrice}
                               description={''}
-                              logo={findStoreLogo(product.store)}
+                              logo={product.store}
                               link={product.link}
                               storeLink={product.storeLink}
                             />

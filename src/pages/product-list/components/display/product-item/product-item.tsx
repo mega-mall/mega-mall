@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Typography, Grid, Hidden, createStyles, makeStyles, Theme, Link } from '@material-ui/core';
 import { Box } from '@material-ui/core';
 import { StyledImage, StyledLogo, StyledGrid, StyledPriceBox, MobileStyledPriceBox, StyledTextBox, StyledLink, StyledStoreLink } from './product-item.styles';
 import { translate } from 'lib/translate';
 import { formatPrice } from 'utils/helpers/price-formatter';
+import { Stores } from 'lib/enums';
 
 export interface IProductItem {
   img?: string;
@@ -13,11 +14,14 @@ export interface IProductItem {
   price: string;
   discountPrice?: string;
   description?: string;
-  logo: string;
+  logo: number;
   storeLink?: string;
 }
 
 const ProductItem = (props: IProductItem) => {
+  const findStoreLogo = (storeId: number) => {
+    return `./../../../../../assets/images/stores/${Stores[storeId].toLocaleLowerCase()}.svg`;
+  };
   return (
     <>
       <StyledGrid container spacing={2}>
@@ -50,7 +54,7 @@ const ProductItem = (props: IProductItem) => {
               )}
               <Grid container item xs={!!props.discountPrice ? 8 : 6} alignItems="center" alignContent="flex-end" direction="column">
                 <StyledLink href={props.storeLink} target="_blank">
-                  <StyledLogo src={props.logo} />
+                  <StyledLogo src={findStoreLogo(props.logo)} />
                   <StyledStoreLink>{translate('MegaMall_GoTo_Store', 'Види продавница')}</StyledStoreLink>
                 </StyledLink>
               </Grid>
@@ -99,7 +103,7 @@ const ProductItem = (props: IProductItem) => {
                 <Hidden mdUp>{!props.discountPrice && <Grid item xs={2} sm={4} />}</Hidden>
                 <Grid item xs={4}>
                   <StyledLink href={props.storeLink} target="_blank">
-                    <StyledLogo src={props.logo} />
+                    <StyledLogo src={findStoreLogo(props.logo)} />
                     <StyledStoreLink>{translate('MegaMall_GoTo_Store', 'Види продавница')}</StyledStoreLink>
                   </StyledLink>
                 </Grid>
