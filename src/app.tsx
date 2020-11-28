@@ -11,7 +11,6 @@ import LoadingScreen from 'react-loading-screen';
 import _DetailedProductPage from 'pages/detailed-view/detailed-product';
 import FinancialButton from 'pages/main/components/financial-button/financial-button';
 import StoresBook from 'pages/stores/stores-book';
-import { initGA, logPageView } from 'utils/helpers/analytics';
 
 interface IApp {
   applicationBootstraped: boolean;

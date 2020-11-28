@@ -2,6 +2,8 @@ import ReactGA from 'react-ga';
 
 export const initGA = () => {
   ReactGA.initialize('G-W6KPKNZ2DW', {
+    debug: true,
+    titleCase: false,
     gaOptions: {
       siteSpeedSampleRate: 100
     }
