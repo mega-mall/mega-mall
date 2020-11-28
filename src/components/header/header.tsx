@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { AppDispatch } from 'index';
@@ -15,6 +15,7 @@ import { SearchBarContainer } from './containers/search-bar';
 import { StyledLink } from 'components/styled-link';
 import { MobileTopBar } from './components/mobile-top-bar';
 import { MenuItem } from 'lib/data';
+import { initGA, logPageView } from 'utils/helpers/analytics';
 
 interface IHeaderProps {
   menuItems: MenuItem[];
@@ -26,6 +27,10 @@ interface IHeaderProps {
 }
 
 const Header = (props: IHeaderProps) => {
+  useEffect(() => {
+    initGA();
+    logPageView();
+  }, []);
   return (
     <>
       <Container maxWidth={false}>

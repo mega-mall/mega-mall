@@ -22,8 +22,6 @@ interface IApp {
 const _App: React.FC<IApp> = (props: IApp) => {
   useEffect(() => {
     props.bootstrapApp();
-    initGA();
-    logPageView();
   }, []);
 
   const Header = lazy(() => import('components/header'));
