@@ -1,7 +1,11 @@
 import ReactGA from 'react-ga';
 
 export const initGA = () => {
-  ReactGA.initialize('G-W6KPKNZ2DW');
+  ReactGA.initialize('G-W6KPKNZ2DW', {
+    gaOptions: {
+      siteSpeedSampleRate: 100
+    }
+  });
 };
 
 export const logPageView = () => {
