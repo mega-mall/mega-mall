@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga';
 
 export const initGA = () => {
-  ReactGA.initialize('G-3QH0TEYG6M', {
+  ReactGA.initialize('G-W6KPKNZ2DW', {
     debug: true,
     titleCase: false,
     gaOptions: {
