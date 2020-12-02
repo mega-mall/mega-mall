@@ -11,7 +11,6 @@ import LoadingScreen from 'react-loading-screen';
 import _DetailedProductPage from 'pages/detailed-view/detailed-product';
 import FinancialButton from 'pages/main/components/financial-button/financial-button';
 import StoresBook from 'pages/stores/stores-book';
-import { initGA, logPageView } from 'utils/helpers/analytics';
 
 interface IApp {
   applicationBootstraped: boolean;
@@ -22,8 +21,6 @@ interface IApp {
 const _App: React.FC<IApp> = (props: IApp) => {
   useEffect(() => {
     props.bootstrapApp();
-    initGA();
-    logPageView();
   }, []);
 
   const Header = lazy(() => import('components/header'));
